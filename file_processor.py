@@ -119,7 +119,7 @@ def rename_heading_insert_columns(df):
     new_headers = [
         "INTERNAL USE", "inv#", "QTY", "Allocated", "On Repair",
         "PN", "DESC", "SN", "COND", "TAG BY", "TAG DATE",
-        "TRACE", "SSP", "Ext SSP"
+        "TRACE", "SSP", "Ext SSP","OWNER CODE","PHYSICAL LOCATION"
     ]
     df.columns = new_headers[:len(df.columns)]
     return df

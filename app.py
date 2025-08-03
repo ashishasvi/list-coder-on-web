@@ -32,7 +32,7 @@ def upload_files():
     return send_file(
         final_excel,
         as_attachment=True,
-        download_name='finalrow.xlsx',  # or whichever filename you wish
+        download_name=lufthansa_file.filename,  # or whichever filename you wish
         mimetype='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
     )
 
