@@ -76,6 +76,8 @@ def process_files(row_stream, lufthansa_stream,coder_value):
     matched_df.iloc[:, 5] = matched_df['Z'].map(pn_dict)  # Map row numbers (Z) back to PN
     matched_df.drop(columns=["Z"], inplace=True)  # Remove the column
     #################
+    ###qty >0
+    matched_df=matched_df[matched_df['QTY']>0]
 
 
 

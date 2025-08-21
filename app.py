@@ -3,6 +3,7 @@ from flask import Flask, render_template, request, redirect, url_for, flash, sen
 from file_processor import process_files  # We'll define process_files in file_processor.py
 
 app = Flask(__name__)
+
 app.secret_key = "supersecretkey"  # required for flash messages
 
 @app.route('/')
@@ -37,4 +38,4 @@ def upload_files():
     )
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(port=5000)
